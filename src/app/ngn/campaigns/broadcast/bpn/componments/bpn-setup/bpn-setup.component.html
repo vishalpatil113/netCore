@@ -1,0 +1,60 @@
+<form  [formGroup]="campaignForm" >
+  <div class="ngn-tabs-save-btn">
+    <button class="btn ngn-link-btn"
+            type="button"
+            name="save_draft">
+      Save as Draft
+    </button>
+    <button class="btn ngn-primary-btn"
+            name="save_next" (click)="saveCampaign()">
+      Save & Next
+    </button>
+  </div>
+
+  <div class="ngn-input-effect w60Per my-3">
+    <input type="text"
+           class="input ngn-input-txt"
+           id="name"
+           required
+           maxLength="255"
+           placeholder="Add campaign title here.."
+           autocomplete="off"
+           formControlName="campiagnName" />
+    <label class="input ngn-input-txt-label" for="name">
+      <span class="ngn-input-span">
+        Campaign Name <span class="star">*</span>
+      </span>
+    </label>
+    <div *ngIf="submitted && formControls.campiagnName.errors" class="text-danger">
+      <div *ngIf="formControls.campiagnName.errors.required">Campiagn Name is required</div>
+      <div *ngIf="formControls.campiagnName.errors.pattern">Only a-z A-Z 0-9-_&@:? characters are allowed && Campaign Name should be 100 characters.</div>
+    </div>
+  </div>
+ 
+  <div class="ngn-input-effect w60Per my-3">
+    <select class="input ngn-input-txt ngn-select-txt" formControlName="siteId" (change)="selectWebsite($event)">
+      <option value="">Select a website</option>
+      <option *ngFor="let websites of websites" [value]="websites.id">{{websites.siteurl}}</option>
+    </select>
+  </div>
+
+  <div class="ngn-input-effect">
+    <span class="custom-control custom-checkbox mr-sm-2">
+      <input type="checkbox"
+             class="custom-control-input"
+             id="checkAdvanceOptions" (change)="isConversionTracking($event)" [checked]="conversionTracking"/>
+      <label class="custom-control-label ngn-campagin-remember align-middle"
+             for="checkAdvanceOptions">
+        Advanced
+        <i class="ngn-grey"><small>(Conversion Tracking)</small></i>
+      </label>
+    </span>
+  </div>
+  <div class="ngn-advance-details"
+       id="ngn-advance-setup-details" *ngIf="conversionTracking">
+    <ngn-conversion-tracking (summary)='summary($event)'></ngn-conversion-tracking>
+    <hr />
+  </div>
+
+  
+</form>

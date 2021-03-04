@@ -1,0 +1,28 @@
+@import "../../styles/theming";
+
+:host {
+  z-index: 101;
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  top: 0;
+}
+
+.header {
+  background-color: $white;
+  box-shadow: 0 3px 21px 0 rgba(85, 85, 85, 0.19);
+  padding: to-rem(8) to-rem(18px);
+  height: to-rem(40+(10*2));
+  width: 100%;
+  z-index: 904;
+  position: sticky;
+  top: 0;
+
+  .icon-w-space {
+    @include media-breakpoint-down(sm) {
+      height: to-rem(26);
+      width: to-rem(26);
+      margin: to-rem(5) 0.5rem;
+    }
+  }
+}

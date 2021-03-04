@@ -1,0 +1,26 @@
+.ngn-trans-android-btn {
+  background: url(../../../../../../../assets/images/android.png);
+}
+.ngn-trans-android-btn.show {
+  background: url(../../../../../../../assets/images/android-active.png);
+}
+.ngn-trans-ios-btn {
+  background: url(../../../../../../../assets/images/apple.png);
+}
+.ngn-trans-ios-btn.show {
+  background: url(../../../../../../../assets/images/apple-active.png);
+}
+#iosViewBtn, #androidViewBtn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin: 5px;
+  width: 24px;
+  height: 24px;
+}
+//  accordion preview css starts
+.preview-layout {
+  width: 100%;
+  background: #fff;
+}
+

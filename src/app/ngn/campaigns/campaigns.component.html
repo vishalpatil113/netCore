@@ -1,0 +1,166 @@
+<div class="pos-relative ngn-landing">
+    <div class="row mb-4">
+      <div class="col-sm-3">
+        <div class="ngn-landing-grid" [class.disabled]="+allChannels?.apnChannel === 0">
+          <div class="ngn-template-grid-img">
+            <span class="app-push-img"></span>
+            <h3 class="ngn-template-grid-subtitle mt-3">App Push</h3>
+          </div>
+          <div class="ngn-template-grid-description" [class.disabled]="+allChannels?.apnChannel === 0">
+            <h3 class="ngn-template-grid-subtitle">App Push</h3>
+            <p class="ngn-template-grid-desc">Engage with your users that are not on your app.</p>
+            <div class="ngn-template-button">
+              <a class="btn ngn-btn-primary" [routerLink]="['/push_dashboard/create_new']">Create Campaign</a>
+              <br>
+              <a class="btn btn-link-primary txts" [routerLink]="['/push_dashboard']">View Campaign</a>
+            </div>
+          </div>
+          <div class="ngn-template-grid-description" [class.hide]="+allChannels?.apnChannel === 1">
+            <p class="ngn-template-grid-desc">To active this channel, please contact Smartech Team.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="ngn-landing-grid" [class.disabled]="+allChannels?.bpnChannel === 0">
+          <div class="ngn-template-grid-img">
+            <span class="web-push-img"></span>
+            <h3 class="ngn-template-grid-subtitle mt-3">Web Push</h3>
+          </div>
+          <div class="ngn-template-grid-description" [class.disabled]="+allChannels?.bpnChannel === 0">
+            <h3 class="ngn-template-grid-subtitle">Web Push</h3>
+            <p class="ngn-template-grid-desc">Engage with your users that are not on your website.</p>
+            <div class="ngn-template-button">
+              <a class="btn ngn-btn-primary" [routerLink]="['/webpush_dashboard/create_new']">Create Campaign</a>
+              <br>
+              <a class="btn btn-link-primary txts" [routerLink]="['/webpush_dashboard']">View Campaign</a>
+            </div>
+          </div>
+          <div class="ngn-template-grid-description" [class.hide]="+allChannels?.bpnChannel === 1">
+            <p class="ngn-template-grid-desc">To active this channel, please contact Smartech Team.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="ngn-landing-grid" [class.disabled]="+allChannels?.emailChannel === 0">
+          <div class="ngn-template-grid-img">
+            <span class="temp-mail-img"></span>
+            <h3 class="ngn-template-grid-subtitle mt-3">Email</h3>
+          </div>
+          <div class="ngn-template-grid-description" [class.disabled]="+allChannels?.emailChannel === 0">
+            <h3 class="ngn-template-grid-subtitle">Email</h3>
+            <p class="ngn-template-grid-desc">Engage with users through personalized &amp; triggered Emails.</p>
+            <div class="ngn-template-button">
+              <a class="btn ngn-btn-primary" href="{{environment.api_url}}campaign/create_new_campaign/type/Regular">Create Campaign</a>
+              <br>
+              <a class="btn btn-link-primary txts" href="{{environment.api_url}}campaign/campaign_dashboard/email_dashboard">View Campaign</a>
+            </div>
+          </div>
+          <div class="ngn-template-grid-description" [class.hide]="+allChannels?.emailChannel === 1">
+            <p class="ngn-template-grid-desc">To active this channel, please contact Smartech Team.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="ngn-landing-grid" [class.disabled]="+allChannels?.smsChannel === 0">
+          <div class="ngn-template-grid-img">
+            <span class="temp-sms-img"></span>
+            <h3 class="ngn-template-grid-subtitle mt-3">SMS</h3>
+          </div>
+          <div class="ngn-template-grid-description" [class.disabled]="+allChannels?.smsChannel === 0">
+            <h3 class="ngn-template-grid-subtitle">SMS</h3>
+            <p class="ngn-template-grid-desc">Engage offline users with  personalized SMS as per user’s time zone.</p>
+            <div class="ngn-template-button">
+              <a class="btn ngn-btn-primary theme-blue" href="{{environment.api_url}}campaign/sms_dashboard/create_new/">Create Campaign</a>
+              <br>
+              <a class="btn btn-link-primary txts" href="{{environment.api_url}}campaign/sms_dashboard/">View Campaign</a>
+            </div>
+          </div>
+          <div class="ngn-template-grid-description" [class.hide]="+allChannels?.smsChannel === 1">
+            <p class="ngn-template-grid-desc">To active this channel, please contact Smartech Team.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+          <div class="ngn-landing-grid" [class.disabled]="+allChannels?.inappMessagingChannel === 0">
+            <div class="ngn-template-grid-img">
+              <span class="in-app-img"></span>
+              <h3 class="ngn-template-grid-subtitle mt-3">In App</h3>
+            </div>
+            <div class="ngn-template-grid-description" [class.disabled]="+allChannels?.inappMessagingChannel === 0">
+              <h3 class="ngn-template-grid-subtitle">In App</h3>
+              <p class="ngn-template-grid-desc">Engage with your users in real-time for better ROI.</p>
+              <div class="ngn-template-button">
+                <a class="btn ngn-btn-primary" href="{{environment.api_url}}campaign/inapp_message/create_inappmessage/">Create Campaign</a>
+                <br>
+                <a class="btn btn-link-primary txts" href="{{environment.api_url}}campaign/inapp_message/inapp_message_dashboard">View Campaign</a>
+              </div>
+            </div>
+            <div class="ngn-template-grid-description" [class.hide]="+allChannels?.inappMessagingChannel === 1">
+              <p class="ngn-template-grid-desc">To active this channel, please contact Smartech Team.</p>
+            </div>
+          </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="ngn-landing-grid" [class.disabled]="+allChannels?.webMessagingChannel === 0">
+          <div class="ngn-template-grid-img">
+            <span class="web-popup-img"></span>
+            <h3 class="ngn-template-grid-subtitle mt-3">Web Popups</h3>
+          </div>
+          <div class="ngn-template-grid-description" [class.disabled]="+allChannels?.webMessagingChannel === 0">
+            <h3 class="ngn-template-grid-subtitle">Web Popups</h3>
+            <p class="ngn-template-grid-desc">Target you website visitors in real-time for better acquistion and engagement.</p>
+            <div class="ngn-template-button">
+              <a class="btn ngn-btn-primary" href="{{environment.api_url}}campaign/notification_dashboard/layout/">Create Campaign</a>
+              <br>
+              <a class="btn btn-link-primary txts" href="{{environment.api_url}}campaign/notification_dashboard">View Campaign</a>
+            </div>
+          </div>
+          <div class="ngn-template-grid-description" [class.hide]="+allChannels?.webMessagingChannel === 1">
+            <p class="ngn-template-grid-desc">To active this channel, please contact Smartech Team.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="ngn-landing-grid" [class.disabled]="+allChannels?.automationChannel === 0">
+          <div class="ngn-template-grid-img">
+            <span class="journey-img"></span>
+            <h3 class="ngn-template-grid-subtitle mt-3">Journeys</h3>
+          </div>
+          <div class="ngn-template-grid-description" [class.disabled]="+allChannels?.automationChannel === 0">
+            <h3 class="ngn-template-grid-subtitle">Journeys</h3>
+            <p class="ngn-template-grid-desc">Create multi-channel automated user journeys.</p>
+            <div class="ngn-template-button">
+              <a class="btn ngn-btn-primary" href="{{environment.api_url}}campaign/automation/create_new_automation">Create Journey</a>
+              <br>
+              <a class="btn btn-link-primary txts" href="{{environment.api_url}}campaign/automation_dashboard">View Journeys</a>
+            </div>
+          </div>
+          <div class="ngn-template-grid-description" [class.hide]="+allChannels?.automationChannel === 1">
+            <p class="ngn-template-grid-desc">To active this channel, please contact Smartech Team.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="ngn-landing-grid" [class.disabled]="+allChannels?.customAudianceChannel === 0">
+          <div class="ngn-template-grid-img">
+            <span class="fca-img"></span>
+            <h3 class="ngn-template-grid-subtitle mt-3">Facebook Custom Audience</h3>
+          </div>
+          <div class="ngn-template-grid-description" [class.disabled]="+allChannels?.customAudianceChannel === 0">
+            <h3 class="ngn-template-grid-subtitle">Facebook Custom Audience</h3>
+            <p class="ngn-template-grid-desc">Engage with your core customer audience based on their Facebook interest and behavior.</p>
+            <div class="ngn-template-button">
+              <a class="btn ngn-btn-primary" href="{{environment.api_url}}campaign/fb_custom_audience/create_fbcustom_audi/">Create Audience</a>
+              <br>
+              <a class="btn btn-link-primary txts" href="{{environment.api_url}}campaign/fb_custom_audience">View Audience</a>
+            </div>
+          </div>
+          <div class="ngn-template-grid-description" [class.hide]="+allChannels?.customAudianceChannel === 1">
+            <p class="ngn-template-grid-desc">To active this channel, please contact Smartech Team.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

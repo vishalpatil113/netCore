@@ -1,0 +1,46 @@
+@import "../../styles/theming";
+:host {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.flex-container-inside {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.flex-body {
+  display: flex;
+  flex: 1;
+  &.inner {
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+    }
+  }
+}
+
+.flex-content {
+  flex: 1;
+}
+
+.flex-nav {
+  z-index: 100;
+  top: auto;
+  background: $nav-bg;
+  box-shadow: to-rem(1) 0 to-rem(7) #cccccc;
+  padding: to-rem(20);
+  position:relative;
+  .navigation-hurm-burger{
+    position: absolute;
+    right:to-rem(7);
+    top:to-rem(22);
+    width:to-rem(35);
+    height:to-rem(35);
+    font-size:to-rem(20);
+  }
+}
+.router-outlet {
+  width: 100%;
+}

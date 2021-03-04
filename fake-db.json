@@ -1,0 +1,53 @@
+{
+  "websites": {
+    "status": "success",
+    "message": "Data fetched successfully",
+    "data": [
+      {
+        "id": 1567,
+        "siteid": "875d83b96730f860717517a90964b9ef",
+        "siteurl": "https:\/\/example.com",
+        "type": "https",
+        "server_type": "fcm"
+      },
+      {
+        "id": 1550,
+        "siteid": "47c6ff5d353085980bfd6b6338be1375",
+        "siteurl": "https:\/\/examplewebsite2.com",
+        "type": "https",
+        "server_type": "fcm"
+      },
+      {
+        "id": 1552,
+        "siteid": "47c6ff5d353085980bfd6b6338be1373",
+        "siteurl": "https:\/\/examplewebsite3.com",
+        "type": "https",
+        "server_type": "fcm"
+      }
+    ]
+  },
+  "activities": {
+    "status": "success",
+    "message": "Data fetched successfully",
+    "data": [
+      {
+        "id": 19,
+        "payload": "payload_float",
+        "datatype": "float",
+        "display_name": "payload_float"
+      },
+      {
+        "id": 18,
+        "payload": "payload_integer",
+        "datatype": "int",
+        "display_name": "payload_integer"
+      },
+      {
+        "id": 17,
+        "payload": "payload_text",
+        "datatype": "text",
+        "display_name": "payload_text"
+      }
+    ]
+  }
+}

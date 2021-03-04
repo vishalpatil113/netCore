@@ -1,0 +1,82 @@
+<div class="ngn-advance-details ngn-advance-details-setup">
+  <h2 class="c-tracking-title">Conversion Tracking <i class="ngn-icon ngn-icon-help ml-2 ngn-grey" tooltip="."
+      placement="right" containerClass="customClassTooltip rightArrow"></i></h2>
+
+  <form [formGroup]="conversionForm">
+    <div formArrayName="list">
+      <div class="row ngn-add-more-conversion" *ngFor="let itemRow of conversionForm.get('list')['controls']; let i=index" [formGroupName]="i">
+        <div class="ngn-input-effect col-auto mb-3 px-3">
+         
+          <select class="input ngn-input-txt ngn-select-txt" formControlName="paylaodId" (change)="selectPayload($event,i)">
+            <option value="">Select Payload</option>
+            <option *ngFor="let p of payloads" [value]="p.id">{{p.display_name}}</option>
+          </select>
+          <label class="input ngn-input-txt-label" for="name">
+            <span class="ngn-input-span">Payloads</span>
+          </label>
+
+        </div>
+
+
+        <div class="ngn-input-effect col-auto mb-1 px-3" *ngIf="getOperatorInteger(itemRow)">
+          <select class="input ngn-input-txt ngn-select-txt" formControlName="oparatorId">
+            <option value="">Select Operator</option>
+            <option *ngFor="let o of operators" [value]="o.id">{{o.value}}</option>
+          </select>
+          <label class="input ngn-input-txt-label" for="name">
+            <span class="ngn-input-span">
+              Operators
+            </span>
+          </label>
+
+        </div>
+        <div class="ngn-input-effect col-auto mb-1 px-3" *ngIf="getOperatorText(itemRow)">
+          <select class="input ngn-input-txt ngn-select-txt" formControlName="oparatorId">
+            <option value="">Select Operator</option>
+            <option *ngFor="let o of textOperator" [value]="o.id">{{o.value}}</option>
+          </select>
+          <label class="input ngn-input-txt-label" for="name">
+            <span class="ngn-input-span">
+              Operators
+            </span>
+          </label>
+
+        </div>
+        <div class="ngn-input-effect col-auto mb-1 px-3">
+          <input type="text" class="input ngn-input-txt" id="name" placeholder="Value" autocomplete="off" formControlName="value" />
+          <label class="input ngn-input-txt-label" for="name">
+            <span class="ngn-input-span">
+              Value
+            </span>
+          </label>
+        </div>
+        <div class="add-more-btn">
+          <a href="javascript:void(0);" (click)="addNewRow()">
+            <span class="ngn-row-count mr-2">
+              <i class="ngn-icon ngn-icon-add"></i>
+              <span class="ngn-row-count-show">{{i+1}}</span>
+            </span>
+          </a>
+          <a href="javascript:void(0);">
+            <span>
+              <i class="ngn-icon ngn-icon-suspended ml-2 font18PX" (click)="deleteRow()"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="ngn-save-btn-outer">
+      <div class="ngn-save-btn text-right">
+        <button class="btn ngn-link-btn"
+                name="save_as_draft"
+                type="button">
+          Save as Draft
+        </button>
+        <button class="btn ngn-primary-btn"
+                name="save_next" (click)="save()">
+          Save &amp; Next
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

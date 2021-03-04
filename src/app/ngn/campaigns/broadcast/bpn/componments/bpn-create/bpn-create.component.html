@@ -1,0 +1,128 @@
+<div class="row">
+  <div class="col-sm-8">
+    <div class="ngn-tab-section">
+      <div class="ngn-tabs">
+        <ul class="nav nav-tabs">
+          <li>
+            <a
+              href="javascript:;"
+              class="active"
+              >SETUP</a
+            >
+            <span ngn-tab-border></span>
+          </li>
+          <li>
+            <a
+              href="javascript:;"
+              >AUDIENCE</a
+            >
+            <span ngn-tab-border></span>
+          </li>
+          <li>
+            <a
+              href="javascript:;"
+              >CONTENT</a
+            >
+            <span ngn-tab-border></span>
+          </li>
+          <li>
+            <a
+              href="javascript:;"
+              >SCHEDULE</a
+            >
+            <span ngn-tab-border></span>
+          </li>
+        </ul>
+        <tabset #tabContents class="ngn-hide-tabs">
+          <!-- Tab 0 | Setup -->
+          <tab>
+            <ngn-bpn-setup (displayCampaignName)='displayCampaignName($event)' (summaryEvent)="summaryEvent($event)"></ngn-bpn-setup
+            >
+          </tab>
+          <!-- Tab 1 | Audience -->
+          <tab>
+            Audience
+          </tab>
+          <!-- Tab 2 | Content -->
+          <tab>
+            Content
+          </tab>
+          <tab>
+            Schedule
+          </tab>
+        </tabset>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <p class="ngn-summary-title">SUMMARY</p>
+    <div class="ngn-right-article">
+      <accordion class="accordion">
+        <accordion-group [isDisabled]="true" class="ngn-last">
+          <a class="card-title"
+             accordion-heading>
+            <span class="mr-2 ngn-light-grey ngn-accordion-icon">
+              <i class="ngn-icon ngn-icon-disc mr-2"></i>
+            </span>
+            {{bpnCampaign.name}}
+          </a>
+        </accordion-group>
+        <accordion-group >
+          <a class="card-title"
+             accordion-heading>
+            <span class="mr-2 ngn-light-grey ngn-accordion-icon">
+              <i class="ngn-icon ngn-icon-broadcast-on mr-2"></i>
+            </span>
+            Web push notification -{{this.website.siteurl}}
+          </a>
+
+          <!-- Conversion preview starts -->
+          <div
+          >
+            <span class="ngn-light-grey ngn-full-modal-ul-li">Conversion Tracking -</span>
+            <ul class="ngn-full-modal-ul-li mt-2">
+              <li>
+                Activity -Test Activity
+              </li>
+
+              <li *ngFor="let sp of summaryPayload let i=index">
+                Parameter{{i+1}} - {{sp.display_name}}
+                <span class="ngn-light-grey">{{sp.cond}}</span>
+                {{sp.value}}
+              </li>
+            </ul>
+          </div>
+        </accordion-group>
+        <accordion-group>
+          <a
+            class="card-title"
+            accordion-heading
+          >
+            <span class="mr-2 ngn-light-grey ngn-accordion-icon">
+              <i class="ngn-icon ngn-icon-users mr-2"></i> </span
+            >Audience
+          </a>
+        </accordion-group>
+
+        <accordion-group>
+          <!-- Preview starts -->
+          <a
+            class="card-title"
+            accordion-heading
+          >
+            <span class="mr-2 ngn-light-grey ngn-accordion-icon">
+              <i class="ngn-icon ngn-icon-content-on"></i>
+            </span>
+          </a>
+        </accordion-group>
+        <accordion-group>
+          <a
+            class="card-title"
+            accordion-heading
+          >
+          </a>
+        </accordion-group>
+      </accordion>
+    </div>
+  </div>
+</div>

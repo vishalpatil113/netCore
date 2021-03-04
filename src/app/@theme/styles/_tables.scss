@@ -1,0 +1,611 @@
+@import 'theming';
+.default-table {
+  width: 100%;
+  border-radius: 3px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 #e0e6f0;
+
+  th {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+  }
+
+  tr:hover {
+    .create-campaing-name-date a {
+      color:#00a4f3;
+    }
+  }
+
+  th.text-center.checkbox-all.sorting_asc,
+  th.text-center.checkbox-all.sorting_desc,
+  th.text-center.checkbox-all.sorting {
+    background-image: none;
+    outline: none;
+  }
+  &.dataTable tbody td,
+  &.dataTable thead th {
+    padding: 16px 12px;
+    background-color: $color-neutral !important;
+    color:#565656;
+    font-size: $base-font-size;
+  }
+  &.dataTable tbody td.odd,
+  &.dataTable tbody td.odd {
+    background-color: $color-neutral !important;
+  }
+  &.dataTable.hover tbody tr:hover,
+  &.dataTable.display tbody tr:hover,
+  &.dataTable tbody > tr.selected,
+  &.dataTable tbody > tr > .selected,
+  &.dataTable.hover tbody > tr.selected:hover,
+  &.dataTable.hover tbody > tr > .selected:hover,
+  &.dataTable.display tbody > tr.selected:hover,
+  &.dataTable.display tbody > tr > .selected:hover {
+    background-color:#f2edfc;
+  }
+  &.dataTable thead {
+    border-bottom: 0.5px solid $table-th-border-color;
+  }
+  &.dataTable thead th {
+    // border-bottom: 0.5px solid $table-th-border-color;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    color: #494957;
+    padding: 23px 12px;
+    border-bottom:1px solid #cecece;
+    i.ngn-icon {
+      padding-left:10px;
+      vertical-align: middle;
+    }
+    span {
+      font-weight: 400;
+    }
+  }
+  &.dataTable tbody tr:hover{
+    background: #f00;
+  }
+  &.dataTable thead td {
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 4;
+    letter-spacing: normal;
+    color: #565656;
+  }
+  input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-left: -16px;
+    top: 8px;
+  }
+  ul.date-time {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+      display: inline-block;
+    }
+    li+li::before {
+      content: "/";
+      padding: 0 5px;
+    }
+    li+li {
+      color: #afafaf;
+    }
+  }
+  .type-col {
+    position: relative;
+    text-indent:10px;
+  }
+  .trigger-list {
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border: solid 0.2px #9b9b9b;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 10px;
+    font-weight: bold;
+    color: #797979;
+    position: absolute;
+    left: 2px;
+    top: 36%;
+    text-indent: 1px;
+  }
+
+  .btn-group.dropdown.dropedit {
+    button {
+      background: none;
+      box-shadow: none;
+      .more-details-tbl {
+        font-size: 18px;
+      }
+    }
+    .dropdown-toggle::after {
+      display: none;
+    }
+  }
+  &.dataTable.display tbody tr.odd>.sorting_1,
+  &.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
+    background-color: #fff;
+  }
+  .custom-control-input {
+    z-index: 3;
+    opacity: 0;
+    &:checked~.custom-control-label::before {
+      border: solid 1px $link-color-active;
+      background-color: $link-color-active;
+      border-radius: 3px;
+    }
+  }
+  .custom-control-label {
+    margin-bottom: 0px;
+    margin-left: -16px;
+    vertical-align: text-bottom;
+  }
+  tbody {
+    .custom-control.custom-checkbox,
+    i.view-list,
+    .dropedit {
+      display: none;
+    }
+    tr:hover,
+    tr.selected {
+      .custom-control.custom-checkbox,
+      i.view-list,
+      .dropedit {
+        display: block;
+      }
+    }
+  }
+  .custom-control.custom-checkbox {
+    padding: 0;
+    text-align: center;
+    // width: 13px;
+    // height: 13px;
+  }
+  .custom-control-label::before,
+  .custom-control-label::after {
+    left: 0;
+    top: -10px;
+    width: 13px;
+    height: 13px;
+  }
+  .custom-control-label::before {
+    border-radius: 3px;
+    background-color: #fafbfc;
+    border: solid 1px #bcbcd2;
+  }
+  &.row-border tbody {
+    th,
+    td,{
+      border-top: 0.5px solid $table-border-color !important;
+    }
+  }
+  &.display tbody {
+    th,
+    td{
+      border-top: 0.5px solid $table-border-color !important;
+    }
+  }
+}
+.ngn-camplist-data2{
+  font-size:12px;
+  span.data2-id-no{
+    color:#999999;
+  }
+  span.data2-id-no{
+    &:after{
+      content:"";
+      border-left:1px solid #cccccc;
+      padding-left:10px;
+      margin-left:10px;
+    }
+  }
+  .ngn-color-scheduled{
+    color:#999999;
+  }
+  .ngn-color-completed{
+    color:#47c588;
+  }
+  .ngn-color-close{
+    color:#ff607c;
+  }
+  .ngn-color-running{
+    color:#4baceb;
+  }
+  .ngn-color-suspended{
+    color:ff607c;
+  }
+  .ngn-color-search{
+    color:#999999;
+  }
+}
+.create-campaing-details {
+  position: relative;
+  small {
+    font-size: 10px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #b1b1b1;
+  }
+  .w10px {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin: 6px;
+    vertical-align: middle;
+    display: none !important;
+  }
+  .status-send {
+    background: #cf6c6c;
+  }
+  .status-draft {
+    background: #e7e7e7;
+  }
+  .status-suspend {
+    background: #f6db82;
+  }
+  .status-running {
+    background: $link-color-active;
+  }
+  .dropedit {
+    position: absolute;
+    right: 1%;
+    top: 25%; // padding: 0px 10px;
+    &.show>.btn-success.dropdown-toggle,
+    &.show>.btn-success.dropdown-toggle:active {
+      background: none;
+      color: $link-color-active;
+      border: none;
+      &:focus {
+        box-shadow: none;
+        color: $link-color-active;
+      }
+    }
+    .dropdown-menu.show{
+      &:after {
+        top: -9px;
+        border-right: 9px solid transparent;
+        border-bottom: 9px solid #fff;
+        border-left: 9px solid transparent;
+      }
+      &:before {
+        top: -10px;
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+        border-bottom: 10px solid #ccc;
+      }
+    }
+    .dropdown-item{
+      color: #40495a;
+      i.ngn-icon {
+        color: #4baceb;
+      }
+      &.active,
+      &:active {
+        background: #f2f1fe;
+      }
+    }
+    button,
+    button:hover,
+    button:focus {
+      border: none;
+      font-weight: bold;
+      color: $link-color-active;
+    }
+    .dropdown-menu {
+      left: 50% !important;
+      top: 100% !important;
+      transform: translate(-50%, 0)!important;
+      min-width:8rem;
+      &::before,
+      &::after{
+        position: absolute;
+        display: inline-block;
+        content: '';
+        top: -14px;
+        border-right: 14px solid transparent;
+        border-left: 14px solid transparent;
+        border-bottom: 14px solid #ccc;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+      &::after{
+        top: -13px;
+        border-right: 13px solid transparent;
+        border-bottom: 13px solid #fff;
+        border-left: 13px solid transparent;
+      }
+    }
+
+  }
+  .create-campaing-name-date{
+    vertical-align: middle;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 390px;
+    position: relative;
+    padding-right: 30px;
+    margin-right: 25px;
+    a{
+      color:#565656;
+      cursor: pointer;
+      max-width: 300px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      vertical-align: middle;
+      display:inline-block;
+    }
+    ul {
+      padding: 0;
+      list-style-type: none;
+      margin: 0;
+      li {
+        display: inline-block;
+        font-size: 10px;
+        color: #b1b1b1;
+      }
+      li+li::before {
+        content: "|";
+        padding: 0 5px;
+      }
+    }
+  }
+}
+
+.dataTables_wrapper.no-footer .dataTables_scrollBody {
+  border-bottom: 0.5px solid $table-border-color;
+}
+
+.search-filter {
+  color: #5c5c6d;
+  .ngn-icon {
+    color: #5c5c6d;
+    font-size: $base-font-size;
+  }
+  .ngn-search-input {
+    background: transparent;
+    border: none;
+    padding-left: 30px;
+    width: 285px;
+    background: url(../../../assets/images/ng-src-icon.png) center left no-repeat;
+    background-size: 24px;
+    border-bottom: 2px solid transparent;
+    height: 30px;
+    &:focus {
+      border-bottom: 2px solid #4baceb;
+      box-shadow: none;
+      border-radius: 0;
+    }
+  }
+  .clear-all{
+    background-color: #ffffff;
+    color: $link-color-active;
+    float: right;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    padding: 2px 7px;
+    cursor: pointer;
+  }
+
+  li.pure-checkbox {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &:hover {
+      background: #f2f1fe;
+    }
+    label + label {
+      width: 85px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 0;
+      vertical-align: middle;
+    }
+  }
+  .custom-control-input {
+    &:checked~.custom-control-label::before {
+      border: solid 1px $link-color-active;
+      background-color: $link-color-active;
+      border-radius: 3px;
+    }
+  }
+  .custom-control-label{
+    &::before {
+      border-radius: 3px;
+      background-color: #fafbfc;
+      border: solid 1px #bcbcd2;
+    }
+  }
+  .list-buttons {
+    border-top: solid 1px rgba(220, 220, 220, 0.5);
+    padding-top: 5px;
+    margin-top: 10px;
+    justify-content: space-around;
+  }
+  .date-picker {
+    background-color: #fff;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+  }
+  .search-two {
+    i.ngn-icon-download {
+      color:#4baceb;
+    }
+    .btn-link-primary.show-draft {
+      color:#5c5c6d;
+      &.active {
+        color: #4baceb;
+      }
+    }
+    .download-all:disabled {
+      opacity: 0.27;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.view-list {
+  position: absolute;
+  right: 24px;
+  top: 38%;
+  color: $link-color-active;
+}
+.ngn-number-value,
+.ngn-percent-value,
+.switch {
+  vertical-align: middle;
+}
+.ngn-dropdown-basic {
+  border: 1px solid #ccc;;
+  margin-top: 10px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+  &:before{
+    content: "";
+    border-bottom: 10px solid #ccc;
+    border-left: 10px solid transparent;
+    border-right:10px solid transparent;
+    position: absolute;
+    top:-10px;
+    left:10px;
+  }
+  &:after {
+    content: "";
+    border-bottom: 8px solid #fff;
+    border-left: 8px solid transparent;
+    border-right:8px solid transparent;
+    position: absolute;
+    top:-8px;
+    left:12px;
+  }
+}
+@media screen and (max-width:1024px){
+  .search-filter{
+    .search-one {
+      max-width: 365px;
+    }
+  }
+}
+
+
+/* Table Fixed Header CSS Start here */
+@media screen and (min-width:1024px){
+  .fixed_headers {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+
+    td:nth-child(1), th:nth-child(1) { min-width: 50px;}
+    td:nth-child(2), th:nth-child(2) { min-width: 200px; width: 100%;}
+    td:nth-child(3), th:nth-child(3) { min-width: 200px; width: 100%; }
+    td:nth-child(4), th:nth-child(4) { min-width: 150px; width: 100%;}
+    td:nth-child(5), th:nth-child(5) { min-width: 150px; width: 100%;}
+    td:nth-child(6), th:nth-child(6) { min-width: 150px; width: 100%;}
+    td:nth-child(7), th:nth-child(7) { min-width: 150px; width: 100%;}
+    td:nth-child(8), th:nth-child(8) { min-width: 150px; width: 100%;}
+
+    thead {
+      tr {
+        display: block;
+        position: relative;
+        width: 100%;
+        &.fix-header-row {
+          // width: calc(100% - 15px);
+        }
+      }
+    }
+    tbody {
+      display: block;
+      overflow: auto;
+      width: 100%;
+      // max-height: 90vh;
+      padding-bottom:80px;
+    }
+  }
+  .fixed_headers-draft {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+
+    td:nth-child(1), th:nth-child(1) { max-width: 75px; width: 50px; }
+    td:nth-child(2), th:nth-child(2) { min-width: 375px; width: 100%; }
+    td:nth-child(3), th:nth-child(3), td:nth-child(4), th:nth-child(4) { min-width: 400px; width: 100%;}
+
+    thead {
+      tr {
+        display: block;
+        position: relative;
+        width: 100%;
+        &.fix-header-row {
+          // width: calc(100% - 15px);
+        }
+      }
+    }
+    tbody {
+      display: block;
+      overflow: auto;
+      width: 100%;
+      // max-height: 90vh;
+      padding-bottom: 90px;
+    }
+  }
+}
+
+@media screen and (max-width:1280px) and (min-width:1024px){
+  .create-campaing-details .create-campaing-name-date {
+    width:190px;
+  }
+}
+@media screen and (max-width:1360px){
+  .fixed_headers {
+    td:nth-child(1), th:nth-child(1) { min-width: 50px;}
+    td:nth-child(2), th:nth-child(2) { min-width: 200px; width: 100%;}
+    td:nth-child(3), th:nth-child(3) { min-width: 200px; width: 100%; }
+    td:nth-child(4), th:nth-child(4) { min-width: 100px; width: 100%;}
+    td:nth-child(5), th:nth-child(5) { min-width: 100px; width: 100%;}
+    td:nth-child(6), th:nth-child(6) { min-width: 100px; width: 100%;}
+    td:nth-child(7), th:nth-child(7) { min-width: 130px; width: 100%;}
+    td:nth-child(8), th:nth-child(8) { min-width: 105px; width: 100%;}
+  }
+  .fixed_headers-draft {
+    td:nth-child(1), th:nth-child(1) { max-width: 75px; width: 50px;}
+    td:nth-child(2), th:nth-child(2) { min-width: 225px; width: 100%;}
+    td:nth-child(3), th:nth-child(3) { min-width: 300px; width: 100%;}
+    td:nth-child(4), th:nth-child(4) { min-width: 300px; width: 100%;}
+  }
+}
+
+/* Table fixed Header CSS ends Here */
+
+/* Split AB CSS starts here for table */
+/*.default-table.dataTable tbody tr.splitAB-details-info td{
+  background-color:#fafafa!important;
+}*/
+.dataTable  .splitAB-details-info td.create-campaing-details{
+  padding-left:15px;
+}
+.splitAB-details-info .create-campaing-details .create-campaing-name-date{
+  padding-left:25px;
+}
+/* Split AB CSS ends here for table */

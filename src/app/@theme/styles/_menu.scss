@@ -1,0 +1,67 @@
+@import 'core/mixins';
+@import 'core/variables';
+ngn-main-menu {
+  display: block;
+  .menu-item {
+    margin-right: to-rem(15);
+  }
+  .logo-containter {
+    margin-bottom: to-rem(20);
+    a.logo:hover {
+      text-decoration: none;
+    }
+    a.logo {
+      display: inline-block;
+      color: $color-text-head;
+      line-height: to-rem(31);
+      font-size: to-rem(20);
+      i {
+        background: url(../../../assets/images/logo.svg) no-repeat 0 center;
+        display: inline-block;
+        width: to-rem(30);
+        height: to-rem(30);
+        vertical-align: text-bottom;
+        margin-right: to-rem(5);
+      }
+    }
+    a.navigation {
+      i {
+        font-size: to-rem(35);
+      }
+    }
+  }
+  .menu-items,
+  .menu-item>.menu-items {
+    list-style-type: none;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in;
+    padding:0;
+  }
+  .menu-item>.menu-items li{
+    margin-left:to-rem(31);
+  }
+  .expanded {
+    margin-bottom: to-rem(25);
+  }
+  .menu-item a {
+    display: flex;
+    color: inherit;
+    text-decoration: none;
+    align-items: center;
+    font-size: to-rem(14);
+    padding: to-rem(8) 0;
+    color: $link-color;
+    .menu-title {
+      flex: 1;
+    }
+    > .menu-icon {
+      display: inline-block;
+      font-size:20px;
+      color:$color-menu-icon;
+      margin-right: to-rem(11);
+    }
+  }
+  .menu-item a:hover {
+    color: $link-color-hover;
+  }
+}

@@ -1,0 +1,614 @@
+@import '../theming';
+/* ANDROID PREVIEW CSS STARTS HERE */
+
+// .phone-fram {
+//   width: 300px;
+//   min-height: 250px;
+//   margin: 0 auto;
+//   position: relative;
+//   overflow: hidden;
+// }
+#androidPreview {
+  background: url('~/../src/assets/images/galaxy.png') 50% 0% no-repeat;
+  background-size: 100%;
+  margin-top: 0px;
+  text-align: left;
+}
+
+.androidPreview {
+  position: absolute;
+  top: 56px;
+  width: 80%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.androidContent {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.androidButton {
+  background: #f4f4f4;
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+.androidButton button {
+  width: 100%;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.14;
+  letter-spacing: normal;
+  color: #494957;
+  background-color: #f4f4f4;
+  padding: 12px;
+}
+
+.androidButton button:first-child {
+  border-bottom: 1px solid #ddd;
+}
+
+.androidButton button+button {
+  border-top: 1px solid #ddd;
+}
+
+.androidHeader {
+  background: #fff;
+  padding: 5px 10px;
+}
+
+.androidBody {
+  background: #fff;
+}
+
+.androidBody audio,
+.androidBody video {
+  width: 100%;
+}
+
+.androidPreviewTitle {
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(63, 67, 69, 0.67);
+  margin: 0;
+  vertical-align: bottom;
+}
+
+.androidBody .androidPreviewSubtitle {
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3f4345;
+  /*margin-top: 5px;*/
+  margin-bottom: 5px;
+  padding: 5px 10px 0px;
+}
+
+.androidBody p {
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(63, 67, 69, 0.67);
+  padding: 0px 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.androidBody {
+  img {
+    padding: 0 10px 10px;
+    width: 100%;
+  }
+  a.androidBodyImg{
+    display: block;
+    text-align: center;
+    img {
+      padding: 0 10px 10px;
+      width: auto;
+      max-height: 250px;
+      max-width: 208px;
+    }
+  }
+}
+
+.androidBodyFooter {
+  background: #ededed;
+  padding: 10px 5px;
+  display: flex;
+}
+
+.androidBodyFooter a {
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.45;
+  letter-spacing: normal;
+  color: #3f4345;
+  padding: 10px 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.androidBodyFooter a+a {
+  margin-left: 3px;
+  padding-left: 0px;
+}
+.androidBodyFooter a + a:before {
+  content: "";
+  border-left: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+#carousel-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+#testimonial-list {
+  overflow: hidden;
+  padding: 10px 0px;
+  // removed, because we are not using actual carousel logic
+  // only showing current images using *ngIf
+  // width: 1600px;
+  margin: 0;
+}
+
+#testimonial-list>li {
+  overflow: hidden;
+  width: 94px;
+  height: 155px;
+  display: inline-block;
+  border: 1px solid #cecece;
+  padding: 5px;
+  border-radius: 3px;
+  margin: 0 5px;
+  a span:first-child {
+    height: 110px;
+    position: relative;
+    margin-bottom: 5px;
+    img {
+      max-width: 84px;
+      max-height: 110px;
+      width: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0;
+    }
+  }
+}
+
+#testimonial-list>li>img {
+  width: 100%;
+  padding: 0;
+}
+
+#testimonial-list>li>p.slider-title {
+  font-size: 10px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #424242;
+  margin: 0;
+  padding: 0;
+}
+
+#testimonial-list>li>span.slider-price {
+  font-size: 10px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #777777;
+}
+
+.ngn-Android-video-preview {
+  position: relative;
+}
+
+.AndroidCarouselView {
+  position: relative;
+  ul li a{
+    p.slider-title {
+      margin-bottom: 0;
+      padding: 0;
+    }
+  }
+  span {
+    color:#777777;
+    font-size:10px;
+    display: block;
+  }
+}
+
+#prv-testimonial {
+  position: absolute;
+  top: 41%;
+  left: -5%;
+  height: 20px;
+  z-index: 2;
+}
+
+#nxt-testimonial {
+  position: absolute;
+  top: 41%;
+  right: -5%;
+  height: 20px;
+  z-index: 2;
+}
+
+.android-mobile-active {
+  background: url(~/../src/assets/images/android.svg)center center no-repeat;
+  background-size: 14px;
+  height: 18px;
+  width: 18px;
+  float: left;
+  margin-top: 5px;
+}
+
+.android-left-arrow {
+  background: url(~/../src/assets/images/angle-pointing-to-left.png)center center no-repeat;
+  background-size: 10px;
+  width: 35px;
+}
+
+.android-right-arrow {
+  background: url(~/../src/assets/images/arrow-point-to-right.png)center center no-repeat;
+  background-size: 10px;
+  width: 35px;
+}
+
+/* ANDROID PREVIEW CSS Ends HERE */
+
+
+
+/* BPN Android Preview CSS */
+.ngn-bpn-preview-note {
+  font-size: 11px;
+  font-weight: normal;
+  font-style: italic;
+  font-stretch: normal;
+  line-height: 1.45;
+  letter-spacing: normal;
+  color: #000;
+  text-align: center;
+}
+
+.ngn-bpn-android-preview {
+  background: url(~/../src/assets/images/galaxy.png) center top no-repeat;
+  background-size: 100%;
+  /*min-height: 250px;*/
+  min-height: 575px;
+  width:260px;
+  position: relative;
+  // display: none;
+  margin: 0 auto;
+}
+.ngn-bpn-android-preview .ngn-bpn-android-details {
+  background: #fff;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 92%;
+  top: 25px;
+}
+.ngn-bpn-android-preview .ngn-web-url {
+  opacity: 0.67;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3f4345;
+  padding: 10px 10px 10px 15px;
+}
+.ngn-bpn-android-preview .ngn-web-content-img {
+  display: flex;
+  flex-direction: row;
+  padding: 0 10px 0 15px;
+}
+.ngn-bpn-android-preview .ngn-web-content {
+  padding-right: 10px;
+  flex-grow: 1;
+}
+.ngn-bpn-android-preview .ngn-web-content h1 {
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #3f4345;
+  max-height: 73px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.ngn-bpn-android-preview .ngn-web-content p {
+  opacity: 0.67;
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3f4345;
+  margin-bottom: 5px;
+  max-height: 37px;
+}
+.ngn-bpn-android-preview .ngn-web-footer {
+  background: #f4f4f8;
+  padding: 5px 0px;
+}
+.ngn-bpn-android-preview .ngn-web-footer a {
+  font-size: 11px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #828282;
+  padding: 5px;
+  margin: 0 5px;
+  text-decoration: none;
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: center;
+  box-sizing: border-box;
+  &.ngn-btn-wpn {
+    width: 70%;
+    &.more-btn {
+      width: 30%;
+    }
+  }
+  &.ngn-btn-wpn-last {
+    width: 26%;
+  }
+}
+
+
+
+/* BPN Mac Preview CSS Starts Here */
+.ngn-bpn-mac-preview {
+  background: url(~/../src/assets/images/mac.png) center top no-repeat;
+  background-size: 100%;
+  min-height: 575px;
+  width:900px;
+  position: relative;
+  margin: 0 auto;
+}
+.ngn-bpn-mac-shadow {
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0.5));
+  position: absolute;
+  bottom: 0;
+  height: 183px;
+  width: 78%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0.7;
+  -webkit-filter: blur(48.2px);
+  filter: blur(48.2px);
+}
+.ngn-bpn-mac-preview .ngn-bpn-mac-details {
+  background: #fff;
+  position: absolute;
+  margin: 0 auto;
+  right: 12%;
+  width: 310px;
+  top: 12%;
+  opacity: 0.89;
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(13px);
+  backdrop-filter: blur(13px);
+  background-color: #ffffff;
+  box-shadow: -2px 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.ngn-bpn-mac-preview .ngn-web-url {
+  opacity: 0.67;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3f4345;
+}
+.ngn-bpn-mac-preview .ngn-web-content-img {
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  position: relative;
+}
+.ngn-bpn-mac-preview  .ngn-web-img img {
+  margin:10px;
+  width:57px;
+}
+.ngn-bpn-mac-preview .ngn-web-content {
+  padding: 5px;
+}
+.ngn-bpn-mac-preview .ngn-web-content h1 {
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #3f4345;
+  margin-bottom: 0px;
+  max-height: 73px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.ngn-bpn-mac-preview .ngn-web-content p {
+  opacity: 0.67;
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3f4345;
+  margin-bottom: 0px;
+  max-height: 37px;
+}
+/* BPN Mac Preview CSS Ends Here */
+
+/* BPN Windows Preview CSS Starts Here */
+.ngn-bpn-windows-preview {
+  background: url(~/../src/assets/images/windows.png) center top no-repeat;
+  background-size: 100%;
+  min-height: 575px;
+  width:900px;
+  position: relative;
+  // display: none;
+  margin: 0 auto;
+}
+.ngn-bpn-windows-shadow {
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0.5));
+  position: absolute;
+  bottom: 0;
+  height: 183px;
+  width: 78%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0.7;
+  -webkit-filter: blur(48.2px);
+  filter: blur(48.2px);
+}
+.ngn-bpn-windows-preview .ngn-bpn-windows-details {
+  background: #fff;
+  position: absolute;
+  margin: 0 auto;
+  right: 11%;
+  width: 230px;
+  top: 39px;
+  transform: scale(0.8);
+  transform-origin: top;
+}
+.ngn-bpn-windows-preview .ngn-web-url {
+  opacity: 0.67;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3f4345;
+}
+.ngn-bpn-windows-preview .ngn-web-content-img {
+  display: flex;
+  flex-direction: row;
+  padding: 0 10px 0 0px;
+  position: relative;
+}
+.ngn-bpn-windows-preview .ngn-web-content-img .close {
+  position: absolute;
+  right: 5px;
+  top:2px;
+  font-size: 14px;
+  font-weight: normal;
+}
+.ngn-bpn-windows-preview .ngn-web-content-img .setting {
+  position: absolute;
+  right: 5px;
+  bottom: 2px;
+}
+.ngn-bpn-windows-preview .ngn-web-content {
+  padding: 5px;
+}
+.ngn-bpn-windows-preview .ngn-web-content h1 {
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #3f4345;
+  margin-bottom: 0px;
+  max-height: 73px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.ngn-bpn-windows-preview .ngn-web-content p {
+  opacity: 0.67;
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3f4345;
+  margin-bottom: 0px;
+  max-height: 37px;
+}
+.ngn-bpn-windows-preview .ngn-web-footer {
+  background: #f4f4f8;
+  padding: 0px;
+}
+.ngn-bpn-windows-preview .ngn-web-footer a {
+  font-size: 11px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #828282;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  word-break:break-all;
+}
+.ngn-bpn-windows-preview .ngn-web-footer a + a {
+  border-top: 1px solid #ccc;
+}
+
+.close-webpush {
+  top: 0;
+  right: 0;
+  position: absolute;
+  padding: 0 5px;
+}
+
+/* BPN Windows Preview CSS Ends Here */

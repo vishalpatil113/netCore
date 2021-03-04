@@ -1,0 +1,382 @@
+@import 'theming';
+/* -- Buttons title css start here -- */
+
+.btn-title {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.btn-subtitle {
+  border-bottom: 2px solid #6b6b6b;
+  display: inline-block;
+  padding-bottom: 0px;
+  color: #6b6b6b;
+}
+
+/* -- Buttons title css end here -- */
+
+/* -- br hr CSS start here -- */
+
+.clearBoth {
+  clear: both;
+}
+
+.separation {
+  border-top: 1px solid #ddd;
+  margin: 15px 0;
+}
+
+/* -- br hr CSS end here -- */
+
+/* -- Normal buttons CSS start here --*/
+
+button.btn {
+  outline: none;
+}
+
+/* -- Normal buttons CSS end here --*/
+
+/* -- Outline buttons CSS start here --*/
+
+.btn-outline-light {
+  color: #929292
+}
+.ngn-btn-outline-primary {
+  border-radius: 3px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border: solid 1px #4baceb;
+}
+/* -- Outline buttons CSS end here --*/
+
+/* -- Disabled buttons CSS start here --*/
+
+.btn.disabled,
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+/* -- Disabled buttons CSS end here --*/
+
+/*-- Wave effect buttons CSS start here --*/
+
+body .ripple {
+  background-position: center;
+  transition: background 0.8s;
+  position: relative;
+  margin: 15px 20px 15px 5px;
+  &:hover,
+  &:focus {
+    opacity: 1;
+    box-shadow: none;
+    -webkit-transition: background-color 0.1s 0.3s, color 0.1s 0.3s;
+    transition: background-color 0.1s 0.3s, color 0.1s 0.3s;
+    &::before {
+      -webkit-animation: anim-moema-2 0.3s 0.3s forwards;
+      animation: anim-moema-2 0.3s 0.3s forwards;
+    }
+  }
+  &:active {
+    background-size: 100%;
+    transition: background 0s;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    bottom: -20px;
+    right: -20px;
+    background: inherit;
+    border-radius: 5px;
+    z-index: -1;
+    opacity: 0.4;
+    -webkit-transform: scale3d(0.8, 0.5, 1);
+    transform: scale3d(0.5, 0.5, 1);
+  }
+  .button--inverted {
+    background: #ECEFF1;
+    color: #49a9da;
+  }
+}
+
+@-webkit-keyframes anim-moema-1 {
+  60% {
+    -webkit-transform: scale3d(0.8, 0.8, 1);
+    transform: scale3d(0.8, 0.8, 1);
+  }
+  85% {
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes anim-moema-1 {
+  60% {
+    -webkit-transform: scale3d(0.8, 0.8, 1);
+    transform: scale3d(0.8, 0.8, 1);
+  }
+  85% {
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@-webkit-keyframes anim-moema-2 {
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes anim-moema-2 {
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/*-- Wave effect buttons CSS end here --*/
+
+/*-- Effect with icon buttons CSS end here --*/
+
+.btn.btn-animation {
+  position: relative;
+  overflow: hidden;
+  padding: 6px 25px;
+  i.icon {
+    position: absolute;
+    transition: all 0.3s;
+    left: -50%;
+    top: 10%;
+  }
+  &:hover i.icon {
+    left: 5%;
+  }
+}
+
+/*-- Effect with icon buttons CSS end here --*/
+
+/* -- Toggle button CSS start here -- */
+
+.toggle-switch-box {
+  display: inline-block;
+  margin: 0;
+  cursor: pointer;
+  outline: 0;
+  overflow: hidden;
+  input {
+    display: none;
+  }
+  input:checked+.toggle-switch-item::before {
+    left: 0;
+  }
+  input:checked+.toggle-switch-item::after {
+    right: -100%;
+  }
+  input:checked+.toggle-switch-item .switch-button {
+    left: calc(100% - 23px);
+  }
+  .toggle-switch-item {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    min-height: 26px;
+    &::before,
+    &::after,
+    .switch-button {
+      position: absolute;
+      top: 50%;
+      transform: translate3d(0, -50%, 0);
+    }
+    &::before,
+    &::after {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1;
+    }
+    &::before {
+      left: -100%;
+      padding: 0 23px 0 0;
+      background-color: transparent;
+      content: attr(data-tg-on);
+      transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    &::after {
+      right: 0;
+      padding: 0 0 0 23px;
+      background-color: #d0d4e7;
+      content: attr(data-tg-off);
+      transition: right 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .switch-button {
+      left: 3px;
+      display: block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid transparent;
+      background-color: #fff;
+      border-radius: 50%;
+      z-index: 1;
+      transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+  }
+}
+
+.switch-rounded {
+  border-radius: 26px;
+}
+
+.switch-rectangular {
+  border-radius: 3px;
+  .toggle-switch-item .switch-button {
+    border-radius: 3px;
+  }
+}
+
+.switch-bg-secondary .toggle-switch-item::before {
+  background-color: #adb5bd;
+}
+
+.switch-bg-primary .toggle-switch-item::before {
+  background-color: #2574ab;
+}
+
+.switch-bg-success .toggle-switch-item::before {
+  background-color: #259dab;
+}
+
+.switch-bg-warning .toggle-switch-item::before {
+  background-color: #ffc107;
+}
+
+.switch-bg-danger .toggle-switch-item::before {
+  background-color: #d9534f;
+}
+
+.switch-bg-info .toggle-switch-item::before {
+  background-color: #5bc0de;
+}
+
+.switch-bg-light .toggle-switch-item::before {
+  background-color: #e9ecef;
+}
+
+.switch-bg-dark .toggle-switch-item::before {
+  background-color: #343a40;
+}
+
+/* -- Toggle button CSS end here -- */
+
+/*-- Buttons CSS Code end Here --*/
+
+/* ngn Toggle CSS start here */
+
+/* The switch - the box around the slider */
+
+.ngn-switch.switch {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 15px;
+  margin: 0;
+}
+
+/* Hide default HTML checkbox */
+
+.ngn-switch.switch input {
+  display: none;
+}
+
+/* The slider */
+
+.ngn-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #c3c3d0;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.ngn-switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 1px;
+  bottom: 1px;
+  background-color: #fff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.ngn-switch input:checked+.slider {
+  background-color: #4baceb;
+}
+
+.ngn-switch input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.ngn-switch input:checked+.slider:before {
+  -webkit-transform: translateX(19px);
+  -ms-transform: translateX(19px);
+  transform: translateX(19px);
+}
+
+/* Rounded sliders */
+
+.ngn-switch .slider.round {
+  border-radius: 34px;
+}
+
+.ngn-switch .slider.round:before {
+  border-radius: 50%;
+}
+
+/* ngn Toggle CSS ends here */
+
+/* tags Css Starts here */
+.ngn-custom-select-create {
+  position: relative;
+  .ngn-multiselect {
+    width: 150px;
+    .selected-list .c-btn {
+      padding: 0 !important;
+    }
+  }
+}
+.ngn-custom-tags-create{
+  position: relative;
+  .ng2-tag-input {
+    .ngn-input-txt-label {
+      top: -7px;
+    }
+  }
+}
+/* tags Css Ends here */
+
+.modal-bpn-template {
+  max-width: 1040px;
+}

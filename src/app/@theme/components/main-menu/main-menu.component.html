@@ -1,0 +1,434 @@
+<!-- <button (click)="toggleOpened()" class="demo-header__toggle">>></button>
+<div class="activeNon" [hidden]="!isActive">
+  <span>Smatech</span>
+  <ul class="menu-items">
+    <ng-container *ngFor="let item of items">
+      <li ngnMenuItem *ngIf="!item.hidden" [menuItem]="item" [class.menu-group]="item.group" (hoverItem)="onHoverItem($event)"
+        (toggleSubMenu)="onToggleSubMenu($event)" (selectItem)="onSelectItem($event)" (itemClick)="onItemClick($event)" class="menu-item">
+      </li>
+    </ng-container>
+  </ul>
+</div> -->
+<nav class="navbar ngn-custom-nav navbar-expand-lg sticky-top navbar-light bg-light">
+  <a href="#" class="emmLogo">
+    <img src="https://pr1.netcoresmartech.com/smartechps/admin/assets/images/netcore-smartech-logo1.png" width="59" height="31"
+      alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ngn-primary-menu m-auto">
+      <li class="nav-item show">
+        <a class="nav-link dropdown-toggle" href="#"  id="menuHome">Home
+          <span class="sr-only">(current)</span>
+        </a>
+        <ul class="dropdown-menu ngn-secondary-menu show" role="menu" aria-labelledby="menuHome">
+          <li class="dropdown-submenu">
+            <a class="dropdown-item" href="#" hidden="hidden"></a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="menuData">Data</a>
+        <ul class="dropdown-menu ngn-secondary-menu" role="menu" aria-labelledby="menuData">
+          <li class="dropdown-submenu">
+            <a class="dropdown-item" tabindex="-1" href="#">Contact</a>
+            <ul class="dropdown-menu ngn-tertiary-menu">
+              <li>
+                <a class="dropdown-item" tabindex="-1" href="#">All Contacts</a>
+              </li>
+              <li class="dropdown-submenu">
+                <a class="dropdown-item" href="#">
+                  Add Contacts
+                </a>
+                <ul class="dropdown-menu ngn-quaternary-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">Via File Upload</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Single Contact</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Create Segment</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Delete Contacts</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Blacklist Contacts</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Attributes</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="menuContent">Content</a>
+        <ul class="dropdown-menu ngn-secondary-menu" role="menu" aria-labelledby="menuContent">
+          <li class="dropdown-submenu">
+            <a class="dropdown-item" tabindex="-1" href="#">
+              Template Gallery
+            </a>
+            <ul class="dropdown-menu ngn-tertiary-menu">
+              <li>
+                <a class="dropdown-item" href="#">Email</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">SMS</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Push Notification</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Browser Push Notification</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="menuContent">Campaigns</a>
+        <ul class="dropdown-menu ngn-secondary-menu" role="menu" aria-labelledby="menuContent">
+          <li class="dropdown-submenu">
+            <a class="dropdown-item" tabindex="-1" href="#">Broadcasts</a>
+            <ul class="dropdown-menu  ngn-tertiary-menu">
+              <li class="dropdown-submenu">
+                <a class="dropdown-item" tabindex="-1" href="#">
+                  Email
+                </a>
+                <ul class="dropdown-menu ngn-quaternary-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">Regular</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Split A-B</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Dynamic</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Birthday Alerts</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Follow Ups</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu">
+                <a class="dropdown-item" href="#" tabindex="-1">SMS</a>
+                <ul class="dropdown-menu  ngn-quaternary-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">Regular</a>
+                    </li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu">
+                <a class="dropdown-item" href="#" tabindex="-1">App Push Notification</a>
+                <ul class="dropdown-menu  ngn-quaternary-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">Regular</a>
+                    </li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu">
+                <a class="dropdown-item" href="#" tabindex="-1">Browser Push Notification</a>
+                <ul class="dropdown-menu  ngn-quaternary-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">Regular</a>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="dropdown-item" tabindex="-1" href="#">On-site Engagement</a>
+            <ul class="dropdown-menu  ngn-tertiary-menu">
+              <li class="dropdown-submenu">
+                <a class="dropdown-item" tabindex="-1" href="#">
+                  Web Messaging
+                </a>
+              </li>
+              <li class="dropdown-submenu">
+                <a class="dropdown-item" tabindex="-1" href="#">
+                  In-app Messaging
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="dropdown-item" tabindex="-1" href="#">Audience Targeting</a>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="dropdown-item" tabindex="-1" href="#">Journeys</a>
+            <ul class="dropdown-menu  ngn-tertiary-menu">
+              <li class="dropdown-submenu">
+                <a class="dropdown-item" tabindex="-1" href="#">
+                  Create Journey
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#"  id="menuInsights">Insights</a>
+        <ul class="dropdown-menu ngn-secondary-menu" role="menu" aria-labelledby="menuInsights">
+          <li class="dropdown-submenu">
+            <a class="dropdown-item" tabindex="-1" href="#">Dashboards & Reports</a>
+            <ul class="dropdown-menu ngn-tertiary-menu">
+              <li class="dropdown-submenu">
+                <a class="dropdown-item" tabindex="-1" href="#">Email</a>
+                <ul class="dropdown-menu ngn-quaternary-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">Dashboard</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Email Stats</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Recipient Engagement</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Domainwise</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Timewise</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Daywise</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Social</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Links Performance</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu">
+                <a class="dropdown-item" href="#">
+                  SMS
+                </a>
+                <ul class="dropdown-menu ngn-quaternary-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">Dashboard</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Tagwise</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Templatewise</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">SenderID Wise</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Channelwise</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu">
+                <a class="dropdown-item" href="#">
+                  App Push Notification
+                </a>
+                <ul class="dropdown-menu ngn-quaternary-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">Dashboard</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">APN Stats</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu">
+                <a class="dropdown-item" href="#">
+                  Browser Push Notification
+                </a>
+                <ul class="dropdown-menu ngn-quaternary-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">Dashboard</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Broadcast Stats</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  Journey
+                </a>
+              </li>
+              <li class="dropdown-submenu">
+                <a class="dropdown-item" href="#">
+                  Activity
+                </a>
+                <ul class="dropdown-menu ngn-quaternary-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">Dashboard</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu">
+                <a class="dropdown-item" href="#">
+                  Web Message
+                </a>
+                <ul class="dropdown-menu ngn-quaternary-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">Dashboard</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="dropdown-item" href="#">Analytics</a>
+            <ul class="dropdown-menu ngn-tertiary-menu">
+              <li>
+                <a class="dropdown-item" tabindex="-1" href="#">Funnel</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  Advance Funnel
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  Cohort
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  RFM
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link dropdown-toggle" href="#"  id="menuAssets">Assets</a>
+        <ul class="dropdown-menu ngn-secondary-menu" role="menu" aria-labelledby="menuAssets">
+          <li class="dropdown-submenu">
+            <a class="dropdown-item" tabindex="-1" href="#" >Web</a>
+            <ul class="dropdown-menu ngn-tertiary-menu">
+              <li>
+                <a class="dropdown-item" href="#">Websites</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="dropdown-item" tabindex="-1" href="#" >Apps</a>
+            <ul class="dropdown-menu ngn-tertiary-menu">
+              <li>
+                <a class="dropdown-item" href="#">Apps</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="dropdown-item" tabindex="-1" href="#" >Social</a>
+            <ul class="dropdown-menu ngn-tertiary-menu">
+              <li>
+                <a class="dropdown-item" href="#">Facebook</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Twitter</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Facebook Custom Audience</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="dropdown-item" tabindex="-1" href="#" >Misc</a>
+            <ul class="dropdown-menu ngn-tertiary-menu">
+              <li>
+                <a class="dropdown-item" href="#">Subscribe Form</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Reply Broadcasts</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Countdown Timer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="dropdown-item" tabindex="-1" href="#" >Custom Activity</a>
+            <ul class="dropdown-menu ngn-tertiary-menu">
+              <li>
+                <a class="dropdown-item" href="#">Overview</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="dropdown-item" tabindex="-1" href="#" >Webhooks</a>
+            <ul class="dropdown-menu ngn-tertiary-menu">
+              <li>
+                <a class="dropdown-item" href="#">Webhooks</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link dropdown-toggle" href="#"  id="menuAdmin">Admin</a>
+        <ul class="dropdown-menu ngn-secondary-menu" role="menu" aria-labelledby="menuAdmin">
+          <li class="dropdown-submenu">
+            <a class="dropdown-item" tabindex="-1" href="#">Account Configuration</a>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="dropdown-item" href="#">User Management</a>
+            <ul class="dropdown-menu ngn-tertiary-menu">
+              <li>
+                <a class="dropdown-item" href="#">Sub Admin</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="dropdown-item" href="#">Billing</a>
+            <ul class="dropdown-menu ngn-tertiary-menu">
+              <li>
+                <a class="dropdown-item" href="#">Account History</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="dropdown-item" href="#">Mics</a>
+            <ul class="dropdown-menu ngn-tertiary-menu">
+              <li>
+                <a class="dropdown-item" href="#">Automated Emails</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">White Label</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Logs</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Paid Retargeting</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="d-inline my-2 my-lg-0 ngn-right-menu">
+    <button class="btn btn-outline-danger my-2 my-sm-0 mr-5 ngn-demo-btn" type="submit">Demo Penal</button>
+    <span class="ngn-header-notification mr-3">
+      <img src="../../../../assets/images/notification.png" width="20px">
+    </span>
+    <span class="ngn-header-help mr-3">
+      <img src="../../../../assets/images/question-hd.png" width="20px">
+    </span>
+    <span  class="ngn-header-user mr-4">SK</span>
+  </div>
+</nav>
+

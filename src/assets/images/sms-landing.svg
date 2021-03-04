@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="48px" viewBox="0 0 66 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>SMS</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Campaigns" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing-page-02" transform="translate(-1074.000000, -243.000000)">
+            <g id="SMS" transform="translate(1075.000000, 244.000000)">
+                <rect id="Rectangle-path" fill-opacity="0" fill="#000000" fill-rule="nonzero" x="0" y="0.14258" width="64.9923" height="45.7143"></rect>
+                <path d="M6.04259,38.5271 C3.28304,38.5271 0.99927,36.679 0.99927,34.4518 L0.99927,5.45036 C0.99927,3.17574 3.23546,1.375 6.04259,1.375 L59.9491,1.375 C62.7086,1.375 64.9924,3.22313 64.9924,5.45036 L64.9924,34.4518 C64.9924,36.7264 62.7562,38.5271 59.9491,38.5271" id="Shape" fill="#D5E1FC" fill-rule="nonzero"></path>
+                <path d="M58.9498,37.2947 C61.7094,37.2947 63.9932,35.4466 63.9932,33.2193 L63.9932,4.21794 C63.9932,1.94332 61.757,0.14258 58.9498,0.14258 L5.04333,0.14258 C2.23619,0.14258 0,1.99071 0,4.21794 L0,33.2193 C0,35.494 2.23619,37.2947 5.04333,37.2947 C5.04333,37.2947 6.56584,46.8197 8.56414,45.7771 C10.5624,44.782 9.5633,41.2753 11.6092,40.754" id="Shape" stroke="#2962FF" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M59.1402,37.2471 C45.1046,37.484 30.4979,37.484 16.6526,37.2471" id="Shape" stroke="#2962FF" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M53.0978,7.67773 C39.0621,7.91467 24.4555,7.91467 10.6101,7.67773" id="Shape" stroke="#2962FF" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M53.0978,13.1738 C39.0621,13.4108 24.4555,13.4108 10.6101,13.1738" id="Shape" stroke="#2962FF" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M53.0978,18.7188 C39.0621,18.9557 24.4555,18.9557 10.6101,18.7188" id="Shape" stroke="#2962FF" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

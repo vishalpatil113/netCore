@@ -1,0 +1,199 @@
+@import '../theming';
+    /* IOS PREVIEW CSS STARTS HERE */
+    // .phone-fram {
+    //   width: 300px;
+    //   min-height: 250px;
+    //   margin: 0 auto;
+    //   position: relative;
+    //   overflow: hidden;
+    // }
+    #iOsPreview {
+      background: url(~/../src/assets/images/iPhone.png) 50% 0% no-repeat;
+      background-size: 100%;
+      text-align: left;
+    }
+    .iOsPreview {
+      position: absolute;
+      top: 56px;
+      width: 80%;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+    }
+    .ios-mobile-active {
+      background: url(~/../src/assets/images/apple.svg)center center no-repeat;
+      background-size: 14px;
+      height: 18px;
+      width: 18px;
+      float: left;
+      margin-top: 5px;
+    }
+    .iOsContent {
+      background: #f4f4f4;
+      border-radius: 11px;
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
+    .iOsButton {
+      background: #f4f4f4;
+      border-radius: 11px;
+      overflow: hidden;
+    }
+    .iOsButton button {
+      width: 100%;
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.14;
+      letter-spacing: normal;
+      color: #494957;
+      background-color: #f4f4f4;
+      padding: 12px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .iOsButton button:first-child {
+      border-bottom:0px solid #ddd;
+    }
+    .iOsButton button + button {
+      border-top:1px solid #ddd;
+    }
+    .IosHeader {
+      background:#fff;
+      padding: 5px 10px;
+    }
+    .iOsBody {
+      background: #f4f4f4;
+    }
+    .iOsBody {
+      .iOSBodyImg{
+        display: block;
+        text-align: center;
+        img {
+          width: auto;
+          max-height: 200px;
+          max-width: 208px;
+        }
+      }
+    }
+    .iOsBody audio{
+      width: 96%;
+      margin: 0 5px;
+    }
+    .iOsBody video {
+      width: 100%;
+    }
+    .iOsPreviewTitle {
+      font-size: 12px;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.33;
+      letter-spacing: normal;
+      color: #494957;
+      margin: 0;
+      vertical-align: bottom;
+    }
+    .iOsBody .iOsPreviewSubtitle {
+      font-size: 11px;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.09;
+      letter-spacing: normal;
+      color: #494957;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      padding: 5px 10px 0px;
+    }
+    .iOsBody p {
+      font-size: 10px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.2;
+      letter-spacing: normal;
+      color: #494957;
+      padding: 0px 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    /* VIDEO CSS START HERE */
+    .ngn-ios-video-preview {
+      position: relative;
+    }
+    .play-push {
+      position: absolute;
+      margin:auto;
+      z-index: 9;
+      left:50%;
+      top:50%;
+      transform: translate(-50%, -50%);
+    }
+    /* IOS PREVIEW CSS ENDS HERE */
+
+    .ios-slider {
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        position: relative;
+        height: 200px;
+      }
+
+      li {
+        text-align: center;
+        border-radius: 4px;
+        background-color: #ffffff;
+        padding: 10px 0;
+        transform: scale(0.5, 0.6);
+        display: inline-block;
+        position: absolute;
+        top: -10px;
+        &.active {
+          transform: scale(0.8, 0.8);
+          left: 0;
+          right: 0;
+          z-index: 1;
+          box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.15);
+        }
+        &.next{
+          right: -24px;
+        }
+        &.prev{
+          left: -24px;
+        }
+        span {
+          height: 160px;
+          display: block;
+          margin-bottom: 5px;
+          position: relative;
+          img {
+            height: auto;
+            max-width: 100%;
+            max-height: 160px;
+            width: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+
+        p {
+          margin: 0;
+          font-size: 12px;
+        }
+        h6 {
+          font-size: 14px;
+        }
+      }
+
+      .prev, .next {
+        position: absolute;
+        z-index: 0;
+      }
+    }

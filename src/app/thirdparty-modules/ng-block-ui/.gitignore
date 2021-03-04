@@ -1,0 +1,15 @@
+node_modules
+npm-debug.log
+settings.json
+*.tgz
+*.metadata.json
+
+/dist
+/bundles
+demo/bundles
+demo/node_modules
+
+index.js
+index.js.map
+lib/**/*.js
+lib/**/*.js.map
